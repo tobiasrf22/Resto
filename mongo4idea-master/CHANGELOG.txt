@@ -1,0 +1,182 @@
+Version 0.12.1
+    * [fix] #224 NPE encountered in IDEA 2018.2 during Server tree building
+
+Version 0.12.0
+    * [fix] #137 Date is incorrect in the DatePicker when editing the cell
+    * [fix] #217 Modifying a server configuration does not work
+    * [fix] #221 CastException when trying to delete a document with _id whose type is String
+    * [fix] Browse private key field in configuration
+    * [add] #222 Default row limit can be set in server configuration
+    * [add] Add Copy Configuration action
+    * [add] #175 Import JSON file
+    * [add] #216 Stats on collection
+    * [add] #220 Stats on database
+    * [add] Support Binary type (view only)
+    * [update] Copy output is a pretty JSON
+    * [update] #144 Copy all documents and Copy selected node are now different actions
+    * [update] Some shortkeys changed to match with Intellij standard
+    * [update] Documents View: Remove double quote on key to improve readbility
+    * [update] Explorer panel is now usable at IDE start (no need to wait for indexation ending)
+    * [update] Edition is now in a Dialog
+    * [update] Renamed 'Default' Auth. Mecanism to 'Plain' for clarity
+    * [update] Set 'SCRAM' Auth. Mecanism as default choice
+    * [remove] Delete Auto-connect option when starting IDE
+
+Version 0.11.0
+    * [fix] NPE when deleting a collection with short key
+    * [fix] Memory issue due to no limit in result
+    * [fix] unable to add an empty array in edition
+    * [add] Databases and collections are alphabetically ordered
+    * [add] Result pagination (memory, not mongo pagination feature)
+    * [update] Delete document is now pop-up window on the _id instead of Edition panel
+    * [update] replace SSH host and port field by single SSH url field
+    * [update] Add Private Key auth method for SSH tunneling
+    * [update] Mongo java driver 3.5
+    * [update] Server management is accessed from Explorer panel, not from General Settings anymore
+
+Version 0.10.0
+    $ [fix] #174 add shortcuts on some actions
+    * [fix] #163 and #177 Malformed filter causes IDE freezing
+    * [fix] #176 _id can be one of the supported JSON type excepting Array
+    * [fix] #173 CodecConfigurationException when using DBRef
+    * [fix] Notification message when saving a document
+    * [add] #133 Handle DBRef with Navigation (experimental)
+
+Version 0.9
+    * [fix] #139 NPE when clicking on Expand/Collapse whereas there is no server configuration set
+    * [fix] #172 and #168 NPE when configuration label is not set
+    * [update] Migrate to mongo driver 3.3.0
+    * [add] #151 Add SSH Tunneling (experimental) + redesign configuration Panel
+    * [add] Use Event Log for plugin messages
+    * [add] #105 add Table view
+
+Version 0.8
+    * [fix] #123 cannot connect when user database is not set
+
+Version 0.7.6
+    * Idea 2016
+
+Version 0.7.5
+    * Idea 15
+
+Version 0.7.4
+    * [fix] Open Settings action
+    * [fix] Mongo Shell command launching
+    * [add] Server Settings: ReadPreference option
+    * [add] Server Settings: Copy Server action (PR #141, thanks kocherovf)
+    * [add] Explorer panel: speed search on databases and collections (thanks kocherovf)
+
+Version 0.7.3
+    * [update] Compatibility with the latest Jetbrains IDE (Idea 15, Webstorm 11, etc.)
+
+Version 0.7.2
+    * [fix] better mongo 3 compatibility
+    * [update] Improve UI reactivity
+    * [update] Settings: remove set database single access checkbox (its usage was unclear)
+    * [update] Explorer: remove Refresh all servers action (its usage was unclear)
+    * [add] Auth mechanism choice in the configuration panel
+
+Version 0.7.1
+    * [fix] compatibility with Idea 14.1 and latest jetbrains product version (thx pwilkin)
+    * [upd] migrate to mongo driver 3.0
+
+Version 0.7.0
+    * [fix] compatibility with Idea 14, Webstorm 9 products
+    * [fix] Idea violation when using mongo operator completion
+    * [fix] #97 UnsupportedOperationException viewing collection
+    * [fix] javascript file detection for executing script in Idea 13.1 UI
+    * [fix] #81 Use User Database as authentication database
+    * [add] Document edition: DateTimePicker
+    * [add] Redesign query panel
+    * [add] #99 Date are displayed and edited in UTC
+    * [add] #90 SSL Support for mongo connection (not tested)
+    * [add] #82 reload resulset after document deletion or modification
+    * [add] Drop database and collection actions (caution!)
+    * [upd] Better support of Darcula/Intellij themes
+    * [upd] Document edition: Enlarge Add Key/Value Dialog default width
+    * [upd] adapt authentication code after migration of mongo-java-driver to version 2.12.2
+
+Version 0.6.1
+    * [fix] javascript file detection for executing script
+
+Version 0.6.0
+    * [update] Results are displayed in a standard editor tab (like any file)
+    * [fix] #77 Long are incorrectly displayed when editing a document
+    * [fix] #78 Cannot edit documents that have custom _id
+    * [fix] #69 Cannot edit number value
+    * [fix] #54 #58 Test Connection Button does not properly work
+    * [add] #68 Ability to run a file
+    * [add] #61 Replica Set support
+
+Version 0.5.2
+    * [fix] API error when opening the Add Dialog
+
+Version 0.5.1
+    * [fix] #57 Fatal Error with new releases of Jebrains products(Webstorm 7, Idea 13, etc.) due to some API changes
+
+Version 0.5.0
+    * [fix] #57 Fatal Error with new releases of Jebrains products (Webstorm 7, Idea 13, etc.) due to some API changes
+    * [fix] #48 Key column is not resizable
+    * [add] Document can be edited (right click on the object id of the document)
+    * [add] Collections can be cleared (right click on the collection in the mongo explorer)
+
+Version 0.4.3
+    * [add] Enable aggregation query button
+    * [fix] #46 In some case db.version() evaluation is not permitted on the database (depending on the security)
+
+Version 0.4.2
+    * [add] #44 Configuration: set working directory for mongo shell
+    * [add] #43 Add expand/collapse actions for the mongo explorer
+    * [add] 'Refresh' from toolbar refreshes all servers, 'Refresh' from popup refreshes only the selected server
+    * [upd] Failover when cannot connect to a server
+    * [fix] #42 user database is not passed to the URI
+
+Version 0.4.1
+    * [fix] #40 NullPointerException when database name is specified
+    * [upd] #41 Make the port field a little larger
+
+Version 0.4.0
+    * [fix] #39 Mongo connection leak
+    * [fix] #33 Error marker in popup points to incorrect position
+    * [fix] #32 $unwind operator does not work
+    * [fix] #35 No way to connect to server if Autoconnect is disabled
+    * [add] #31 Specific database can be set in the configuration
+    * [add] #30 Results are rendered in a TreeTable
+
+Version 0.3.0:
+    * [fix] Darcula settings icon is not displayed on the explorer when no server has been set
+    * [fix] #27 The plugin should not connect to default localhost/27017 when running for the first time
+    * [add] #20 Support more than 1 server (See the README on how to manage them)
+    * [add] #6 Show results collection in a new tab
+    * [add] Mongo shell can run for each configuration
+    * [add] #26 Enable/Disable mongo server connection on IDE startup
+    * [add] #24 Collection sort
+    * [add] Expand / Collapse All for tree results
+    * [upd] #29 Change Run Query Shortcut 'CTRL+F5' to 'CTRL+ENTER'
+
+Version 0.2.1:
+    * [add] Darcula theme support
+    * [fix] Shell arguments are not saved in the configuration
+
+Version 0.2.0:
+    * [fix] #18 If server auth is enabled, use credentials when list Databases
+    * [add] #19 Refresh databases button available in the explorer panel
+    * [add] Mongo shell integration
+    * [add] Configuration: Mongo shell options (path and program arguments)
+    * [upd] migrate to the mongo-java-driver 2.10.1
+
+Version 0.1.2:
+    * [upd] Improve feedback when the query execution fails
+    * [upd] #15 Improve feedback when server is not found
+
+Version 0.1.1:
+    * [fix] #13 CollectionUtils not found
+    * [fix] #14 UI resources not properly disposed when closing the project
+
+Version 0.1.0: Initial version
+    * Server configuration
+    * Display collections for each database
+    * Display collections content with tree mongo object navigation
+    * Simple querying
+    * Advanced querying with pipeline operation (Mongo Server should be 2.2.0 minimum)
+    * Copy / Paste for query and results

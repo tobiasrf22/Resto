@@ -1,0 +1,7 @@
+*.iml
+classes/
+META-INF/
+.idea/
+.gradle/
+build/
+.DS_Store

@@ -1,2 +1,9 @@
-http://pythoninicios.blogspot.com/2016/08/como-visualizar-un-punto-en-google-maps.html
-http://pythoninicios.blogspot.com/2016/08/como-visualizar-mapa-google-maps-en.html
+from  pymongo import MongoClient
+import urllib
+import pprint
+
+client = MongoClient('localhost', 27017)
+db = client['Resto']
+posts = db.Resto
+vergalisa = posts.find({'name':'Riviera Caterer'})
+print(vergalisa)
