@@ -3,7 +3,9 @@ import urllib
 import pprint
 
 client = MongoClient('localhost', 27017)
-db = client['Resto']
-posts = db.Resto
-vergalisa = posts.find({'name':'Riviera Caterer'})
-print(vergalisa)
+db = client['Barrios']
+posts = db.Barrios
+l = posts.find({},{'location.coordinates':1})
+
+for v in l:
+    print(v)
