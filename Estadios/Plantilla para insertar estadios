@@ -1,0 +1,2 @@
+db.Estadios.insert({'Estadio': 'Marcelo Bielsa','Pais':'Argentina','Equipo':'Club Atlético Newell's Old Boys','Capacidad':'42000','location':{type:'Point',coordinate: [-32.956155, -60.661441]}, 'Presidente': 'Eduardo Bermudez'})
+

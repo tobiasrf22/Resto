@@ -5,7 +5,7 @@ import pprint
 client = MongoClient('localhost', 27017)
 db = client['Barrios']
 posts = db.Barrios
-l = posts.find({},{'location.coordinates':1})
+l = posts.find()
 j = []
 for v in l:
     j.append(v)
