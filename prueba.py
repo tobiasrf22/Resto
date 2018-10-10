@@ -6,6 +6,8 @@ client = MongoClient('localhost', 27017)
 db = client['Barrios']
 posts = db.Barrios
 l = posts.find({},{'location.coordinates':1})
-
+j = []
 for v in l:
-    print(v)
+    j.append(v)
+
+print(j)
