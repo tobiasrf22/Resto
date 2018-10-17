@@ -9,4 +9,5 @@ query = {'name':'Avellaneda'}
 l = posts.find()
 j = {}
 for v in l:
-j['location']['coordinates']
+    j.update(v)
+print(j['location']['coordinates'])
