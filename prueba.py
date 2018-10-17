@@ -5,9 +5,9 @@ import pprint
 client = MongoClient('localhost', 27017)
 db = client['Barrios']
 posts = db.Barrios
-l = posts.find()
-j = []
+query = {'name':'Avellaneda'}
+l = posts.find(query)
+j = {}
 for v in l:
-    j.append(v)
-
+    j = v
 print(j)
