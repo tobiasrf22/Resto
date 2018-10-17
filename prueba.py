@@ -6,8 +6,8 @@ client = MongoClient('localhost', 27017)
 db = client['Barrios']
 posts = db.Barrios
 query = {'name':'Avellaneda'}
-l = posts.find(query)
+l = posts.find()
 j = {}
 for v in l:
-    j = v
+    j.update(v)
 print(j)
