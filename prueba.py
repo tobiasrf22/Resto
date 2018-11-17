@@ -6,7 +6,12 @@ import pprint
 estadios = []
 barrios = []
 client = MongoClient('localhost', 27017)
-for a in range(20):
+db_estadio = client['Estadios']
+posts_estadio = db_estadio.Estadios
+l_estadio = posts_estadio.find().count()
+
+
+for a in range(l_estadio):
     db = client['Estadios']
     posts = db.Estadios
     l = posts.find()
@@ -15,7 +20,10 @@ for a in range(20):
         j.update(v)
         est =estadio(j['Estadio'],j['Pais'],j['Equipo'],j['Capacidad'],j['location']['coordinate'])
         estadios.append(est)
-for b in range(6):
+db_Barrios = client['Barrios']
+posts_Barrios = db_Barrios.Barrios
+l_Barrios = posts_Barrios.find().count()
+for b in range(l_Barrios):
     db1 = client['Barrios']
     posts1 = db1.Barrios
     l1 = posts1.find()
